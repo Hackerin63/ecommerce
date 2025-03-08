@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    body{
+        background-image: url(bg4.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 15cm;
+    }
+    form{
+        position: relative;
+        left: 37%;
+        border: 5px solid;
+        width: 250px;
+        height: 250px;
+        border-radius: 30px;
+        border-color: rgb(49, 38, 33);
+        background-color: rgb(71, 57, 57);
+        input{
+            position: relative;
+            top: 30px;
+            height: 30px;
+            width: 200px;
+            border-radius: 20px;
+            background-color: inherit;
+            color: aliceblue;
+        }
+        button{
+            position: relative;
+            top: 40px;
+            background-color: rgb(69, 238, 69);
+            border-radius: 20px;
+            height: 35px;
+            width: 100px;
+        }
+    }
+    a{
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+    }
+</style>
+</head>
+<body>
+    <h2>Login</h2>
+    <form name="loginForm" action="login.php" method="POST" onsubmit="return validateForm()">
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="register.html">Register here</a></p>
+    <script src="validation.js"></script>
+</body>
+</html>

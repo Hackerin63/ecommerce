@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            background-image: url(bg8.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        h1{
+            color: white;
+        }
+        #product-list{
+            
+                position: relative;
+                color: antiquewhite;
+        
+        img{
+            height: 200px;
+            width: 300px;
+        }
+        button{
+                
+                
+                background-color:inherit;
+                border-radius: 10px;
+                height: 35px;
+                color: antiquewhite;
+                width: 200px;
+            }
+    }
+    </style>
+</head>
+<body>
+    <h1>Shop</h1>
+    <div id="product-list">
+        <!-- Products will be loaded dynamically -->
+    </div>
+
+    <script>
+        fetch("get_products.php")
+            .then(response => response.json())
+            .then(data => {
+                let productsDiv = document.getElementById("product-list");
+                data.forEach(product => {
+                    let productHTML = `
+                        <div>
+                            <img src="${product.image}" width="100">
+                            <h3>${product.name}</h3>
+                            <p>$${product.price}</p>
+                            <button>Add to Cart</button>
+                        </div>
+                    `;
+                    productsDiv.innerHTML += productHTML;
+                });
+            });
+    </script>
+</body>
+</html>

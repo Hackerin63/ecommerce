@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            background-image: url(bg3.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 15cm;
+        }
+        a{
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+    }
+        form{
+            position: relative;
+            left: 37%;
+            border: 5px solid;
+            width: 250px;
+            height: 250px;
+            border-radius: 30px;
+            border-color: rgb(49, 38, 33);
+            background-color: rgb(71, 57, 57);
+            input{
+                position: relative;
+                top: 30px;
+                height: 30px;
+                width: 200px;
+                border-radius: 20px;
+                background-color: inherit;
+                color: aliceblue;
+            }
+            button{
+                position: relative;
+                top: 40px;
+                background-color: rgb(69, 238, 69);
+                border-radius: 20px;
+                height: 35px;
+                width: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Register</h2>
+    <form action="register.php" method="POST">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit">Register</button>
+    </form>
+    <p>Already have an account? <a href="login.html">Login here</a></p>
+</body>
+</html>
